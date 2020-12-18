@@ -36,28 +36,13 @@ puts <<~TEXT
     puts "1以上を入力してください。"
   end
 
+    puts "#{people_num}名ですね。"
 
-
-  total_price = (price * people_num).floor
-  discounted_total_price = (price * people_num * 0.9).floor
+  total_price = price * people_num
 
   if people_num >= 5
-    puts "#{people_num}名ですね。"
     puts "5人以上なので10%割引になります。"
-    puts "合計金額は#{discounted_total_price}円になります。"
-  else
-    puts "#{people_num}名ですね。"
-    puts "合計金額は#{total_price}円になります。"
+    total_price *= 0.9
   end
-
-
-  
- 
-
-
-
-
-
-
-  
+    puts "合計金額は#{total_price.floor}円になります。"
 
